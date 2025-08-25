@@ -1,0 +1,26 @@
+public class atividade02 {
+    public static void main(String[] args) {
+        String nome = "Katriel Alves da Silva";
+        int idade = 20;
+        int mesesTrabalhados = 12;
+        int quantidadeDeProdutosComprados = 150;
+        double valorTotalProdutos = 15.000;
+        double salarioBrutoMensal = 2.500;
+        double descontoAnualDoSalario = 300;
+
+        double salarioBrutoAnual = salarioBrutoMensal * mesesTrabalhados;
+        double SalarioComDesconto = salarioBrutoAnual - descontoAnualDoSalario;
+        double mediaValorGastoNosProdutos = valorTotalProdutos / quantidadeDeProdutosComprados;
+        String informacoes = "Olá, " + nome + " seu salario anual liquido é de.: " + SalarioComDesconto + " essa seriam suas informações! ";
+
+
+        System.out.println("Nome do trabalhador.:" + nome);
+        System.out.println("Idade do trabalhador.:" + idade);
+        System.out.println("Meses trabalhados.:" + mesesTrabalhados);
+        System.out.println("Quantos produtos foram comprados.:" + quantidadeDeProdutosComprados);
+        System.out.println("Valor total dos produtos comprados.:" + valorTotalProdutos);
+        System.out.println("Seu salario brutro.:" + salarioBrutoMensal);
+        System.out.println("Seus desconto no salario.: " + descontoAnualDoSalario);
+        System.out.println(informacoes);
+    }
+}
