@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Atividade14 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // 1) Pedir valor da compra
+        System.out.print("Digite o valor total da compra: R$ ");
+        double valorCompra = sc.nextDouble();
+
+        double desconto = 0;  // percentual
+        double valorDesconto = 0; 
+        double valorFinal = 0;
+
+        // 2) Aplicar regras de desconto
+        if (valorCompra > 500) {
+            desconto = 20;
+        } else if (valorCompra >= 200 && valorCompra <= 500) {
+            desconto = 10;
+        } else if (valorCompra >= 100 && valorCompra < 200) {
+            desconto = 5;
+        } else {
+            desconto = 0;
+        }
+
+        // 3) Calcular valores
+        valorDesconto = valorCompra * (desconto / 100);
+        valorFinal = valorCompra - valorDesconto;
+
+        // 4) Mostrar resultados
+        System.out.println("\nResumo da Compra:");
+        System.out.println("Valor original: R$ " + valorCompra);
+        System.out.println("Desconto aplicado: " + desconto + "%");
+        System.out.println("Valor do desconto: R$ " + valorDesconto);
+        System.out.println("Valor final da compra: R$ " + valorFinal);
+
+        sc.close();
+    }
+}
