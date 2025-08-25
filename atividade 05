@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Atividade5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // 1. Crie uma variável para armazenar a nota
+        System.out.print("Digite a nota (0 a 10): ");
+        double notaAluno = sc.nextDouble();
+
+
+        if (notaAluno >= 9) {
+            System.out.println("Excelente");
+        } else if (notaAluno >= 7) {
+            System.out.println("Bom");
+        } else if (notaAluno >= 5) {
+            System.out.println("Satisfatório");
+        } else {
+            System.out.println("Insatisfatório");
+        }
+
+        sc.close();
+    }
+}
