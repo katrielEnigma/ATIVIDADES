@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class Atividade12 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // 1) Pedir temperatura ao usuário
+        System.out.print("Digite a temperatura em graus Celsius: ");
+        double temp = sc.nextDouble();
+
+        // 2) Classificar a temperatura
+        if (temp > 30) {
+            System.out.println("Quente");
+        } else if (temp >= 15 && temp <= 30) {
+            System.out.println("Agradável");
+        } else {
+            System.out.println("Frio");
+        }
+
+        sc.close();
+    }
+}
