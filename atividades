@@ -1,0 +1,26 @@
+public class atividade01 {
+        public static void main(String[] args) {
+
+
+            int idade1 = 20;
+            int idade2 = 50;
+            double altura = 1.71;
+            String nome = "Katriel Alves da Silva";
+            boolean Estudante = true;
+
+
+            int somaIdades = idade1 + idade2;
+            double alturaDobro = altura * 2;
+            String saudacao = "Bem vindo, " + nome + "!";
+
+
+            System.out.println("Idade: " + idade1);
+            System.out.println("Altura: " + altura);
+            System.out.println("Nome: " + nome);
+            System.out.println("É estudante? " + Estudante);
+            System.out.println("Soma das idades: " + somaIdades);
+            System.out.println("Altura dobrada: " + alturaDobro);
+            System.out.println(saudacao);
+        }
+   }
+
