@@ -1,0 +1,26 @@
+public class atividade03 {
+    public static void main(String[] args){
+
+                String nomeDoProduto = "Xiaomi";
+                double valorDoProduto = 2.300;
+                int quantidadeDeProdutosComprados = 1;
+                double MargemDoLucroDesejada = 0.5;
+                double taxaDeImpostoSobreProduto = 1.0;
+
+                double ValorTotalSemImpostos = valorDoProduto * quantidadeDeProdutosComprados;
+
+                double valorDoImposto = ValorTotalSemImpostos * taxaDeImpostoSobreProduto;
+
+                double ValorTotalComImpostos = ValorTotalSemImpostos + valorDoImposto;
+
+                double precoDeVenda = ValorTotalComImpostos * (1 + MargemDoLucroDesejada);
+
+                System.out.println("Valor total do produto sem impostos é.: " + ValorTotalSemImpostos);
+                System.out.println("Valor do imposto: " + valorDoImposto);
+                System.out.println("Valor total com impostos: " + ValorTotalComImpostos);
+                System.out.println("Preço de venda necessário: " + precoDeVenda);
+
+
+
+    }
+}
