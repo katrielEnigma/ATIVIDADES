@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class AtividadeImpostos {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // 1) Entrada de dados
+        System.out.print("Digite o salário bruto do funcionário: R$ ");
+        double salarioBruto = sc.nextDouble();
+
+        System.out.print("Digite o número de anos trabalhados na empresa: ");
+        int anosTrabalhados = sc.nextInt();
+
+        double bonus = 0;
+        double imposto = 0;
+        double salarioComBonus, salarioLiquido;
+
+        // 2) Regras de bonificação
+        if (anosTrabalhados > 10) {
+            bonus = salarioBruto * 0.10; // 10%
+        } else if (anosTrabalhados >= 5) {
+            bonus = salarioBruto * 0.05; // 5%
+        } else {
+            bonus = 0; // sem bônus
+        }
+
+        salarioComBonus = salarioBruto + bonus;
+
+        // 3) Regras de desconto de imposto
+        if (salarioBruto > 5000) {
+            imposto = salarioComBonus * 0.27;
+        } else if (salarioBruto >= 3000) {
+            imposto = salarioComBonus * 0.18;
+        } else {
+            imposto = salarioComBonus * 0.10;
+        }
+
+        // 4) Cálculo do salário líquido
+        salarioLiquido = salarioComBonus - imposto;
+
+        // 5) Saída formatada
+        System.out.println("Resumo Salarial:");
+        System.out.println("Salário bruto: R$ " + salarioBruto);
+        System.out.println("Bônus recebido: R$ " + bonus);
+        System.out.println("Imposto descontado: R$ " + imposto);
+        System.out.println("Salário líquido: R$ " + salarioLiquido);
+
+        sc.close();
+    }
+}
