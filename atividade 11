@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Atividade11 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // 1) Pedir os dois números
+        System.out.print("Digite o primeiro número: ");
+        double num1 = sc.nextDouble();
+
+        System.out.print("Digite o segundo número: ");
+        double num2 = sc.nextDouble();
+
+        // 2) Pedir a operação
+        System.out.print("Digite a operação (+, -, *, /): ");
+        char op = sc.next().charAt(0);  // pega o primeiro caractere digitado
+
+        double resultado;
+
+        // 3) Verificar a operação
+        if (op == '+') {
+            resultado = num1 + num2;
+            System.out.println("Resultado: " + resultado);
+        } else if (op == '-') {
+            resultado = num1 - num2;
+            System.out.println("Resultado: " + resultado);
+        } else if (op == '*') {
+            resultado = num1 * num2;
+            System.out.println("Resultado: " + resultado);
+        } else if (op == '/') {
+            if (num2 != 0) {
+                resultado = num1 / num2;
+                System.out.println("Resultado: " + resultado);
+            } else {
+                System.out.println("Erro: divisão por zero não é permitida!");
+            }
+        } else {
+            System.out.println("Operação inválida!");
+        }
+
+        sc.close();
+    }
+}
