@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Atividade6 {
+    public static void main(String[] args) {
+        
+        Scanner sc = new Scanner(System.in);
+
+    
+        System.out.print("Digite um número inteiro: ");
+        int numero = sc.nextInt();
+
+    
+        int resto = numero % 2;
+
+        if (resto == 0) {
+            System.out.println("O número " + numero + " é PAR.");
+        } else {
+            System.out.println("O número " + numero + " é ÍMPAR.");
+        }
+
+        
+        sc.close();
+    }
+}
